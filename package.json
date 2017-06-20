@@ -1,0 +1,34 @@
+{
+  "name": "rxjs-redux-snippets",
+  "main": "./lib/rxjs-redux-snippets",
+  "version": "0.1.0",
+  "description": "RxJS and Redux Snippets for a modern development using es6",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "rxjs-redux-snippets:toggle"
+  },
+  "repository": "https://github.com/atom/rxjs-redux-snippets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariellephan/rxjs-redux-snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ariellephan/rxjs-redux-snippets/issues"
+  },
+  "keywords": [
+    "RxJS",
+    "Reactive",
+    "Observables",
+    "React",
+    "Redux",
+    "Snippets",
+    "ES6",
+  ],
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
