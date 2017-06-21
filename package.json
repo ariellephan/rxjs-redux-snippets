@@ -1,6 +1,5 @@
 {
   "name": "rxjs-redux-snippets",
-  "main": "./lib/rxjs-redux-snippets",
   "version": "1.0.0",
   "description": "RxJS and Redux Snippets for a modern development using es6",
   "activationCommands": {
@@ -25,7 +24,8 @@
   ],
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.0.0"
   },
+  "author": "Arielle Nguyen",
   "dependencies": {}
 }
