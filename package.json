@@ -1,7 +1,7 @@
 {
   "name": "rxjs-redux-snippets",
   "version": "1.2.0",
-  "description": "RxJS and Redux Snippets for a modern development using es6",
+  "description": "RxJS and Redux Observable Atom Snippets for async and event-based computations",
   "activationCommands": {
     "atom-workspace": "rxjs-redux-snippets:toggle"
   },
