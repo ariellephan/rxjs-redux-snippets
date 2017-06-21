@@ -8,7 +8,7 @@ RxJs Snippets added so far:
  * rxjs.Observable.of
  * rxjs.Observable.fromEvent
  * rxjs.Observable.fromEventPattern
- 
+
  * rxjs.Observable.fromCallback
  * rxjs.Observable.fromNodeCallback
  * rxjs.Observable.create
@@ -19,7 +19,7 @@ RxJs Snippets added so far:
  * rxjs.Observable.timer
  * rxjs.Observable.prototype.toCallback
 
-To use RxJs with Redux, use redux-observable https://github.com/redux-observable/redux-observable#documentation
+To use RxJs with Redux, use [redux-observable](https://github.com/redux-observable/redux-observable)
 
 redux-observable Snippets added so far:
 
