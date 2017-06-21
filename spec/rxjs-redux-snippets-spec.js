@@ -53,7 +53,7 @@ describe('RxjsReduxSnippets', () => {
       jasmine.attachToDOM(workspaceElement);
 
       expect(workspaceElement.querySelector('.rxjs-redux-snippets')).not.toExist();
-      
+
       // This is an activation event, triggering it causes the package to be
       // activated.
       atom.commands.dispatch(workspaceElement, 'rxjs-redux-snippets:toggle');

@@ -2,13 +2,12 @@
 
 Ported for Atom from https://github.com/alanvivona/rxjs-snippets-vscode with addition of [redux-observable](https://github.com/redux-observable/redux-observable) snippets.
 
-## RxJs Snippets added so far:
+### RxJs Snippets added:
 
  * rxjs.Observable.from.map.filter
  * rxjs.Observable.of
  * rxjs.Observable.fromEvent
  * rxjs.Observable.fromEventPattern
-
  * rxjs.Observable.fromCallback
  * rxjs.Observable.fromNodeCallback
  * rxjs.Observable.create
@@ -19,8 +18,50 @@ Ported for Atom from https://github.com/alanvivona/rxjs-snippets-vscode with add
  * rxjs.Observable.timer
  * rxjs.Observable.prototype.toCallback
 
-## Redux-Observable Snippets added so far:
+### Redux-Observable Snippets:
+
+#### redux-observable combined root file - `rdo-root`
+```javascript
+/**
+ * Import all your Epics and Reducers into single file each, which then
+ * exports the root Epic
+ */
+import { combineEpics } from 'redux-observable';
+import { combineReducers } from 'redux';
+import ${1:ObjectName1}, { ${1:ObjectName1}Epic } from './${1:ObjectName1}';
+import ${2:ObjectName2}, { ${2:ObjectName2}Epic } from './${2:ObjectName2}';
+
+export const rootEpic = combineEpics(
+  ${1:ObjectName1}Epic,
+  ${2:ObjectName2}Epic
+);
+
+export const rootReducer = combineReducers({
+  ${1:ObjectName1},
+  ${2:ObjectName2}
+});
+
+```
+#### redux-observable configure store - `rdo-store`
+```javascript
+/**
+ * configureStore
+ */
+import { createStore, applyMiddleware } from 'redux';
+import { createEpicMiddleware } from 'redux-observable';
+import { rootEpic, rootReducer } from './modules/root';
+
+const epicMiddleware = createEpicMiddleware(rootEpic);
+
+export default function configureStore() {
+  const store = createStore(
+    rootReducer,
+    applyMiddleware(epicMiddleware)
+  );
 
 
+return store;
+}
 
+```
 ![RxJs Snippets Example](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
