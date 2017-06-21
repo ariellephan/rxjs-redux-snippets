@@ -15,6 +15,7 @@ describe('RxjsReduxSnippets', () => {
     activationPromise = atom.packages.activatePackage('rxjs-redux-snippets');
   });
 
+
   describe('when the rxjs-redux-snippets:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel

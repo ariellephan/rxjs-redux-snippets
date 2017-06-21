@@ -3,8 +3,6 @@
   "main": "./lib/rxjs-redux-snippets",
   "version": "0.1.0",
   "description": "RxJS and Redux Snippets for a modern development using es6",
-  "keywords": [
-  ],
   "activationCommands": {
     "atom-workspace": "rxjs-redux-snippets:toggle"
   },
@@ -23,7 +21,7 @@
     "React",
     "Redux",
     "Snippets",
-    "ES6",
+    "ES6"
   ],
   "license": "MIT",
   "engines": {

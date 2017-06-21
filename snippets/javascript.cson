@@ -1,0 +1,35 @@
+'.source.js':
+  'rxjs.Observable.from.map.filter':
+    'prefix': 'rxof'
+    'body': """
+        /**
+         *  ${1:object} store
+         */
+
+    			Observable.from(${1:object})
+    			.map(v => ${2:v})
+    			.filter(v => ${3:true})
+    			.subscribe(
+    			\tv => { console.log( ${4:v}) }
+    			\te => { console.log( ${5:e} ) }
+    			\t() => { console.log('complete') }
+    			);
+
+        """
+  'rxjs.Observable.of':
+    'prefix': 'rxoo'
+    'body': """
+        /**
+         *  ${1:object} store
+         */
+
+    			Observable.of(${1:object})
+    			.map(v => ${2:v})
+    			.filter(v => ${3:true})
+    			.subscribe(
+    			\tv => { console.log(${4:v}) }
+    			\te => { console.log(${5:e}) }
+    			\t() => { console.log('complete') }
+    			);
+
+        """
