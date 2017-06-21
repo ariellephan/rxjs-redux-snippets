@@ -4,19 +4,19 @@ Ported for Atom from https://github.com/alanvivona/rxjs-snippets-vscode with add
 
 ### RxJs Snippets added:
 
- * rxjs.Observable.from.map.filter
- * rxjs.Observable.of
- * rxjs.Observable.fromEvent
- * rxjs.Observable.fromEventPattern
- * rxjs.Observable.fromCallback
- * rxjs.Observable.fromNodeCallback
- * rxjs.Observable.create
- * rxjs.Observable.empty
- * rxjs.Observable.fromPromise
- * rxjs.Observable.interval
- * rxjs.Observable.range
- * rxjs.Observable.timer
- * rxjs.Observable.prototype.toCallback
+ * rxjs.Observable.from.map.filter `rxomap`
+ * rxjs.Observable.of `rxoo`
+ * rxjs.Observable.fromEvent `rxofe`
+ * rxjs.Observable.fromEventPattern `rxofep`
+ * rxjs.Observable.fromCallback `rxofcall`
+ * rxjs.Observable.fromNodeCallback `rxofnode`
+ * rxjs.Observable.create `rxoc`
+ * rxjs.Observable.empty `rxoem`
+ * rxjs.Observable.fromPromise `rxofp`
+ * rxjs.Observable.interval `rxoint`
+ * rxjs.Observable.range `rxorange`
+ * rxjs.Observable.timer `rxotime`
+ * rxjs.Observable.prototype.toCallback `rxotocall`
 
 ### Redux-Observable Snippets:
 
