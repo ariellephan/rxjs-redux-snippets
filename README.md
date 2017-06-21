@@ -1,8 +1,8 @@
 # RxJS Redux Atom snippets package
 
-Ported for Atom from https://github.com/alanvivona/rxjs-snippets-vscode with additions of Redux-RxJs integration
+Ported for Atom from https://github.com/alanvivona/rxjs-snippets-vscode with addition of [redux-observable](https://github.com/redux-observable/redux-observable) snippets.
 
-RxJs Snippets added so far:
+## RxJs Snippets added so far:
 
  * rxjs.Observable.from.map.filter
  * rxjs.Observable.of
@@ -19,9 +19,7 @@ RxJs Snippets added so far:
  * rxjs.Observable.timer
  * rxjs.Observable.prototype.toCallback
 
-To use RxJs with Redux, use [redux-observable](https://github.com/redux-observable/redux-observable)
-
-redux-observable Snippets added so far:
+## Redux-Observable Snippets added so far:
 
 
 
