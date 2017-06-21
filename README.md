@@ -2,7 +2,7 @@
 
 Ported for Atom from https://github.com/alanvivona/rxjs-snippets-vscode with addition of [redux-observable](https://github.com/redux-observable/redux-observable) snippets.
 
-### RxJs Snippets added:
+## RxJs Snippets added:
 
  #### * rxjs.Observable.from.map.filter `rxomap`
  #### * rxjs.Observable.of `rxoo`
@@ -18,7 +18,8 @@ Ported for Atom from https://github.com/alanvivona/rxjs-snippets-vscode with add
  #### * rxjs.Observable.timer `rxotime`
  #### * rxjs.Observable.prototype.toCallback `rxotocall`
 
-### Redux-Observable Snippets:
+
+## Redux-Observable Snippets:
 
 #### redux-observable combined root file - `rdo-root`
 ```javascript
