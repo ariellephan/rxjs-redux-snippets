@@ -1,4 +1,4 @@
-# RxJS Redux Atom snippets package
+# RxJS and Redux Observables Atom snippets package
 
 Ported for Atom from https://github.com/alanvivona/rxjs-snippets-vscode with addition of [redux-observable](https://github.com/redux-observable/redux-observable) snippets.
 

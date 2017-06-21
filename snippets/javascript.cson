@@ -1,6 +1,6 @@
 '.source.js':
   'rxjs.Observable.from.map.filter':
-    'prefix': 'rxof'
+    'prefix': 'rxomap'
     'body': """
 			Observable.from(${1:object})
 			.map(v => ${2:v})
@@ -51,3 +51,138 @@
   		);
 
           """
+  'rxjs.Observable.fromCallback':
+    'prefix': 'rxofcall'
+    'body': """
+			Observable.fromCallback(${1:callbackFn})
+			.map(v => ${3:v})
+			.filter(v => ${4:true})
+			.subscribe(
+			\tv => { console.log(${5:v}) }
+			\te => { console.log(${6:e}) }
+			\t() => { console.log('complete') }
+			);
+
+          """
+  'rxjs.Observable.fromNodeCallback':
+    'prefix': 'rxofnode'
+    'body': """
+			Observable.fromNodeCallback(${1:nodeCallbackFn})
+			.map(v => ${3:v})
+			.filter(v => ${4:true})
+			.subscribe(
+			\tv => { console.log(${5:v}) }
+			\te => { console.log(${6:e}) }
+			\t() => { console.log('complete') }
+			);
+
+          """
+  'rxjs.Observable.prototype.toCallback':
+    'prefix': 'rxotocall'
+    'body': """
+			Rx.Observable.prototype.toCallback = function (cb) {
+			\tvar source = this
+			\treturn function () {
+			\t\tlet val, hasVal = false
+			\t\tsource.subscribe(
+			\t\t\tv => {
+			\t\t\t\thasVal = true
+			\t\t\t\tval = v
+			\t\t\t\tconsole.log(${5:v})
+			\t\t\t}
+			\t\t\te => { console.log(${6:e}) }
+			\t\t\t() => { console.log('complete') }
+			\t\t)
+			\t}
+			};
+
+          """
+  'rxjs.Observable.create':
+    'prefix': 'rxoc'
+    'body': """
+			Observable.create(subscriber => {
+			\tsubscriber.next(${1:object});
+			\tsubscriber.complete();
+			})
+			.map(v => ${2:v})
+			.filter(v => ${3:true})
+			.subscribe(
+			\tv => { console.log(${4:v}) }
+			\te => { console.log(${5:e}) }
+			\t() => { console.log('complete') }
+			);
+
+        """
+  'rxjs.Observable.empty':
+    'prefix': 'rxoem'
+    'body': """
+			Rx.Observable.empty().subscribe(
+			\tnull
+			\tnull
+			\t() => { console.log('Completed') }
+			);
+
+        """
+  'rxjs.Observable.fromPromise':
+    'prefix': 'rxofp'
+    'body': """
+			Rx.Observable.fromPromise(fetch('someURI')).subscribe(
+			\t(resolve) => {
+			\t\tconsole.log('Resolve:',resolve)
+			\t}
+			\t(reject) => {
+			\t\tconsole.log('Reject:',reject)
+			\t}
+			\t() => {
+			\t\tconsole.log('Completed')
+			\t};
+
+        """
+  'rxjs.Observable.interval':
+    'prefix': 'rxoint'
+    'body': """
+			Rx.Observable.interval(period).subscribe(
+			\tv => {
+			\t\tconsole.log('Value', v)
+			\t}
+			\te => {
+			\t\tconsole.log('Error', e)
+			\t}
+			\t() => {
+			\t\tconsole.log('Completed')
+			\t}
+			);
+
+        """
+  'rxjs.Observable.range':
+    'prefix': 'rxorange'
+    'body': """
+			Rx.Observable.range(start, count).subscribe(
+			\tv => {
+			\t\tconsole.log('Value', v)
+			\t}
+			\te => {
+			\t\tconsole.log('Error', e)
+			\t}
+			\t() => {
+			\t\tconsole.log('Completed')
+			\t}
+			);
+
+        """
+  'rxjs.Observable.timer':
+    'prefix': 'rxotime'
+    'body': """
+    	Rx.Observable.timer(dueTime, period).subscribe(,
+			\tv => {,
+			\t\tconsole.log('Value', v),
+			\t},,
+			\te => {,
+			\t\tconsole.log('Error', e),
+			\t},,
+			\t() => {,
+			\t\tconsole.log('Completed'),
+			\t},
+			);
+
+        """
