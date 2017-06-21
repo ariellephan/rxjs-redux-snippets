@@ -2,34 +2,52 @@
   'rxjs.Observable.from.map.filter':
     'prefix': 'rxof'
     'body': """
-        /**
-         *  ${1:object} store
-         */
-
-    			Observable.from(${1:object})
-    			.map(v => ${2:v})
-    			.filter(v => ${3:true})
-    			.subscribe(
-    			\tv => { console.log( ${4:v}) }
-    			\te => { console.log( ${5:e} ) }
-    			\t() => { console.log('complete') }
-    			);
+			Observable.from(${1:object})
+			.map(v => ${2:v})
+			.filter(v => ${3:true})
+			.subscribe(
+			\tv => { console.log( ${4:v}) }
+			\te => { console.log( ${5:e} ) }
+			\t() => { console.log('complete') }
+			);
 
         """
   'rxjs.Observable.of':
     'prefix': 'rxoo'
     'body': """
-        /**
-         *  ${1:object} store
-         */
-
-    			Observable.of(${1:object})
-    			.map(v => ${2:v})
-    			.filter(v => ${3:true})
-    			.subscribe(
-    			\tv => { console.log(${4:v}) }
-    			\te => { console.log(${5:e}) }
-    			\t() => { console.log('complete') }
-    			);
+			Observable.of(${1:object})
+			.map(v => ${2:v})
+			.filter(v => ${3:true})
+			.subscribe(
+			\tv => { console.log(${4:v}) }
+			\te => { console.log(${5:e}) }
+			\t() => { console.log('complete') }
+			);
 
         """
+  'rxjs.Observable.fromEvent':
+    'prefix': 'rxofe'
+    'body': """
+    	Observable.fromEvent(${1:target},${2:eventName})
+    	.map(v => ${3:v})
+    	.filter(v => ${4:true})
+    	.subscribe(
+    	\tv => { console.log(${5:v}) }
+    	\te => { console.log(${6:e}) }
+    	\t() => { console.log('complete') }
+    	);
+
+          """
+  'rxjs.Observable.fromEventPattern':
+    'prefix': 'rxofep'
+    'body': """
+  		Observable.fromEventPattern(${1:addHandlerFn},${2:delHandlerFn})
+  		.map(v => ${3:v})
+  		.filter(v => ${4:true})
+  		.subscribe(
+  		\tv => { console.log(${5:v}) }
+  		\te => { console.log(${6:e}) }
+  		\t() => { console.log('complete') }
+  		);
+
+          """
