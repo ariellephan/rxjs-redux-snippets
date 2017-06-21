@@ -232,3 +232,17 @@
       }
 
         """
+  'redux-observable epic':
+    'prefix': 'rdo-epic'
+    'body': """
+      /**
+       * ${1:epicName} epic sample
+       */
+      const ${1:epicName}Epic = action$ =>
+        action$.filter(action => action.type === ${2:ACTION1})
+          .mapTo({ type: ${3:ACTION2} });
+
+      // later...
+      dispatch({ type: ${2:ACTION1} });
+
+        """
